@@ -1,0 +1,28 @@
+{%extends "base.html"%}
+{%block content%}
+    {% if session['authenticated']%}
+        <h3>{{message}}</h3>
+        <h1> Welcome to Vivaan's Wonder {{session['username']}}</h1>
+    {% else %}
+        <h1>Hi Guest Welcome to Vivaan's Wonder</h1>
+    {% endif %}
+    <div class="pt">
+        <!-- <h2> Periodic Table</h2> -->
+        <div class="info">
+            <p>
+            In 1869 a Russian scientist called Dmitri Mendeleev invented the periodic system that we still use today. <br>
+            Before him others had tried to 'order' the elements but their tables were incomplete or grouped elements together which weren't similar. <br>
+            Dmitri's table didn't include all of the elements because not all of them were known at the time. <br>
+            He left gaps for them though and could predict their properties based on the elements around them in his table.
+            </p>
+        </div>
+        <br>    
+        <div class="image">
+            
+            <img src="../static/Periodic_Table.png" alt="">
+        </div>
+
+        
+    </div>
+
+{%endblock%}

@@ -1,0 +1,33 @@
+{%extends "base.html"%}
+{%block content%}
+  <div class="wrapper">
+    <h4>{{message}}</h4>
+    <form action="/validateq9" method="POST">
+    <div class="title">What is the chemical formula for Sulfuric acid  </div>
+    <div class="box">
+      <input type="radio" name="select" id ="option-1" value="1">
+      <input type="radio" name="select" id="option-2" value="2">
+      <input type="radio" name="select" id="option-3" value="3">
+      <input type="radio" name="select" id="option-4" value="4">
+      <label for="option-1" class="option-1">
+        <div class="dot"></div>
+        <div class="text">H₂SO₄</div>
+      </label>
+      <label for="option-2" class="option-2">
+        <div class="dot"></div>
+        <div class="text">Li2CO3</div>
+      </label>
+<label for="option-3" class="option-3">
+        <div class="dot"></div>
+        <div class="text"> Sc</div>
+      </label>
+      <label for="option-4" class="option-4">
+        <div class="dot"></div>
+        <div class="text">Ne</div>
+      </label>
+      <button type="submit" class="btn-gradient">Submit</button>
+    </div> 
+    </form>
+  </div>
+
+  {%endblock%}

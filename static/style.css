@@ -1,0 +1,312 @@
+
+*{
+  box-sizing: border-box;
+}
+body{
+  display: grid;
+  place-items: center;
+  background-image: url("./kunal-shinde--f0YLss50Bs-unsplash\ \(1\).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.wrapper{
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px rgba(0,0,0,0.2); 
+}
+.wrapper .title{
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 20px 20px 0 0;
+  padding: 10px;
+}
+.wrapper .box{
+    padding: 20px 30px;
+    background: rgba(14, 0, 170,0.8 );
+    border-radius: 0 0 10px 10px;  
+    opacity: 0.9;
+  }
+  .wrapper .box label{
+    display: flex;
+    height: 53px;
+    width: 100%;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 50px;
+    margin: 10px 0;
+    padding-left: 20px;
+    cursor: default;
+    transition: all 0.3s ease;
+  }
+  #option-1:checked ~ .option-1,
+  #option-2:checked ~ .option-2,
+  #option-3:checked ~ .option-3,
+  #option-4:checked ~ .option-4{
+    background: #333;
+    border-color: #333;
+  }
+  .wrapper .box label .dot{
+    height: 20px;
+    width: 20px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  #option-1:checked ~ .option-1 .dot,
+  #option-2:checked ~ .option-2 .dot,
+  #option-3:checked ~ .option-3 .dot,
+  #option-4:checked ~ .option-4 .dot{
+    background: #fff;
+  }
+  .box label .dot::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+#option-1:checked ~ .option-1 .dot::before,
+#option-2:checked ~ .option-2 .dot::before,
+#option-3:checked ~ .option-3 .dot::before,
+#option-4:checked ~ .option-4 .dot::before{
+  background: #333;
+  transform: translate(-50%, -50%) scale(1);
+}
+.wrapper .box label .text{
+  color: rgb(243, 231, 231);
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 10px;
+  transition: color 0.3s ease;
+}
+#option-1:checked ~ .option-1 .text,
+#option-2:checked ~ .option-2 .text,
+#option-3:checked ~ .option-3 .text,
+#option-4:checked ~ .option-4 .text
+{
+  color: #fff;
+}
+.wrapper .box input[type="radio"]{
+  display: none;
+}
+
+button{
+  width: 300px;
+  font-size: 15px;
+  background-color: rgb(20, 170, 0);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px;
+}
+
+header{
+  display: flex;
+  width: 95%;
+  background: rgba(0,0,0,0.8);
+  opacity: 0.9;
+  height: 50px;
+  box-shadow: 5px 5px 5px 0 rgba(23, 24, 23, 0.8) ;
+  border-radius: 10px; 
+  margin: 1%;
+  padding-right: 5px;
+}
+header nav,.score{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+}
+
+header nav ul{
+  display: flex;
+}
+header nav ul li{
+  border-right: thin solid #fff;
+  list-style-type: none;
+  text-align: center;
+
+}
+header nav ul li:last-child{
+  border: none;
+}
+header nav ul li a{
+  text-decoration: none;
+  color: rgb(197, 181, 181);
+  padding: 30px;
+  margin-right:25px;
+  text-shadow: 3px 3px #596a81;
+
+ 
+}
+header nav ul li a:hover{
+  color: #000;
+  text-decoration: underline red 3px;
+}
+ 
+
+h2{
+  margin:5% 0 2% 0 ;
+  background-color: rgba(255, 255, 255, 0.472);
+  padding: 10px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+
+}
+
+.btn-gradient {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  animation: c 53s linear infinite;
+  background: linear-gradient(
+  121.19deg,
+  rgba(133, 239, 49, 0) 25.73%,
+  hsla(0, 0%, 100%, 0.3) 45.27%,
+  rgba(133, 239, 49, 0) 62.27% ), black;
+  transition: background-color 0.5s ease;
+  }
+  
+.btn-gradient:hover {
+  animation: c 10s linear infinite;
+  background: linear-gradient(
+  121.19deg,
+  
+  rgba(133, 239, 49, 0) 25.73%,
+  
+  hsla(0, 0%, 100%, 0.3) 45.27%,
+  
+  rgba(133, 239, 49, 0) 62.27% ),gold;
+  
+  }
+  
+@keyframes c {
+  0% {
+  background-position: -5000px 0;  
+  }
+  to {
+  background-position: 5000px 0;
+  } 
+  }
+
+.login{
+  background-image:linear-gradient(red,blue );
+  width: 500px;
+  height: max-content;
+}
+
+.pt{
+width: 90%;
+}
+
+.pt img{
+  width: 100%;
+  border-radius: 20px;
+
+  box-sizing: border-box;
+}
+.pt .info{
+  background-color: #06ad;
+  padding: 10px;
+  padding-top: 5px;
+  text-align: justify;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: gold;
+}
+
+.next{
+  margin: 2%;
+}
+
+.next a{
+    text-decoration: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    color: teal;
+    font-size: 25px;
+}
+.login{
+    width: 100%;
+    height: 100vh;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+.thanku{
+  background-color: rgba(0, 200, 0, 0.7);
+  border-radius: 10px ;
+  margin: 7%;
+  padding: 10px;
+}
+.thanku h2{
+  margin:5% 0 2% 2% ;
+  background-color: rgba(255, 255, 255, 0.472);
+  padding: 10px;
+  border-radius: 10px;
+  width: 90%;
+  text-align: center;
+}
+.score{
+  color: maroon;
+}
+h1{
+  text-align: center;
+  border-bottom: 2px solid red;
+  color: red;
+  padding: 10px;
+  background-color: gold;
+  border-radius: 10px;
+  margin: 2%;
+}
+.aboutme h3{
+  background: rgba(0, 0, 0, 0.8);
+  width: 60%;
+  margin-left: 20%;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: justify;
+  color: gold;
+}
+h4{
+  color: gold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}

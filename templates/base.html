@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Radio Buttons </title>
+    <link rel="stylesheet" href="../static/style.css">
+    {%block style%}
+    {%endblock style%}
+</head>
+
+<body>
+    <header>
+       <nav>
+           <ul>
+               <li><a href="/home">Home</a></li>
+               <li><a href="/q1">Quiz</a></li>
+               {% if session['authenticated']%}
+                   <li><a href="/logout">Logout</a></li>
+                {% else %}
+                    <li><a href="/login">Login/Sign up</a></li>
+                {% endif %}
+               <li><a href="/aboutme">About me</a></li>
+               <li><a href="/feedback">FeedBack</a></li>
+               <li><a href="https://givemefive.in/projects/nextcreator/vivaan_aurora/">My Projects</a></li>
+            </ul>
+        </nav>
+        <div class="score"><p>Score = {{score}}</p></div>
+        
+   </header> 
+   
+
+  {%block content%}  
+  {%endblock%}  
+ 
+    
+</body>
+</html>

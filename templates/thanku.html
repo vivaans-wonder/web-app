@@ -1,0 +1,7 @@
+{% extends 'base.html'%}
+    {% block content%}
+    <div class="thanku">
+        <h1>Thank You {{session['username']}} For Playing My Quiz</h1>
+        <h2>Your Final Score is {{score}}</h2>
+    </div>
+    {% endblock content%}
